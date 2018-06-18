@@ -156,12 +156,6 @@ selfbot by:
         "Mozilla/5.0 (Windows NT 5.0; WOW64; rv:5.0) Gecko/20100101 Firefox/5.0",
         "Mozilla/5.0 (Windows NT 5.0; rv:5.0) Gecko/20100101 Firefox/5.0"        
     ],
-    "myProfile": {
-        "displayName": "",
-        "coverId": "",
-        "pictureStatus": "",
-        "statusMessage": ""
-    },
     "mimic": {
         "copy": False,
         "status": False,
@@ -189,6 +183,12 @@ read = {
     "readTime": {},
     "setTime":{},
     "ROM": {}
+}
+
+myProfile = {
+	"displayName": "",
+	"statusMessage": "",
+	"pictureStatus": ""
 }
 
 mimic = {
@@ -224,13 +224,11 @@ backup.pictureStatus = contact.pictureStatus
 
 mulai = time.time() 
 dangerMessage = ["cleanse","group cleansed.","mulai",".winebot",".kickall","mayhem","kick on","Kick","!kickall","nuke","บิน","Kick","กระเด็น","หวด","เซลกากจัง","เตะ",".","ปลิว"]
-fukgerMessage = ["ควย","หี","แตด","เย็ดแม่","เย็ดเข้","ค.วย","สัส","เหี้ย","ไอ้เหี้ย","พ่อมึงตาย","ไอ้เลว","ระยำ","ชาติหมา","หน้าหี","เซลกาก","ไอ้เรส","ไอ้เหี้ยเรส","ไอ่เรส","พ่องตาย","ส้นตีน","แม่มึงอ่ะ","แม่มึงดิ","พ่อมึงดิ"]
+#fukgerMessage = ["ควย","หี","แตด","เย็ดแม่","เย็ดเข้","ค.วย","สัส","เหี้ย","ไอ้เหี้ย","พ่อมึงตาย","ไอ้เลว","ระยำ","ชาติหมา","หน้าหี","เซลกาก","ไอ้เรส","ไอ้เหี้ยเรส","ไอ่เรส","พ่องตาย","ส้นตีน","แม่มึงอ่ะ","แม่มึงดิ","พ่อมึงดิ"]
 
-contact = line.getProfile()
-backup = line.getProfile()
-backup.displayName = contact.displayName
-backup.statusMessage = contact.statusMessage
-backup.pictureStatus = contact.pictureStatus
+myProfile["displayName"] = lineProfile.displayName
+myProfile["statusMessage"] = lineProfile.statusMessage
+myProfile["pictureStatus"] = lineProfile.pictureStatus
 #==============================================================================#
 #==============================================================================#            
 def Rapid1Say(mtosay):
@@ -339,7 +337,7 @@ def listgrup():
              คำสั่งในกลุ่ม
  ────┅═ই۝ई═┅────
 ╔══════════════┓
-╠❂➣ แอด เชิญแอด
+╠❂➣ แอด
 ╠❂➣ ชื่อกลุ่ม
 ╠❂➣ ไอดีกลุ่ม
 ╠❂➣ เปิดลิ้ง
@@ -916,7 +914,7 @@ def lineBot(op):
                             contact = line.getContact(ls)
                             mi_d = contact.mid
                             line.sendContact(to, mi_d)
-                elif "Clone " in msg.text:
+                elif ".ก๊อป " in msg.text:
                   if msg._from in admin:
                     targets = []
                     key = eval(msg.contentMetadata["MENTION"])
@@ -1293,6 +1291,26 @@ def lineBot(op):
                                Mids = [target for contact in thisgroup[0].members]
                                mi_d = Mids[:33]
                                line.createGroup("RED SAMURI Group",mi_d)
+                               line.sendText(msg.to,"🏂⛷️[จะออกไปแตะขอบฟ้า]")
+                               line.createGroup("RED SAMURI Group",mi_d)
+                               line.sendText(msg.to,"🏂⛷️[จะออกไปแตะขอบฟ้า]")
+                               line.createGroup("RED SAMURI Group",mi_d)
+                               line.sendText(msg.to,"🏂⛷️[จะออกไปแตะขอบฟ้า]")
+                               line.createGroup("RED SAMURI Group",mi_d)
+                               line.sendText(msg.to,"🏂⛷️[จะออกไปแตะขอบฟ้า]")
+                               line.createGroup("RED SAMURI Group",mi_d)
+                               line.sendText(msg.to,"🏂⛷️[จะออกไปแตะขอบฟ้า]")
+                               line.createGroup("RED SAMURI Group",mi_d)
+                               line.sendText(msg.to,"🏂⛷️[จะออกไปแตะขอบฟ้า]")
+                               line.createGroup("RED SAMURI Group",mi_d)
+                               line.sendText(msg.to,"🏂⛷️[จะออกไปแตะขอบฟ้า]")
+                               line.createGroup("RED SAMURI Group",mi_d)
+                               line.sendText(msg.to,"🏂⛷️[จะออกไปแตะขอบฟ้า]")
+                               line.createGroup("RED SAMURI Group",mi_d)
+                               line.sendText(msg.to,"🏂⛷️[จะออกไปแตะขอบฟ้า]")
+                               line.createGroup("RED SAMURI Group",mi_d)
+                               line.sendText(msg.to,"🏂⛷️[จะออกไปแตะขอบฟ้า]")
+			       line.createGroup("RED SAMURI Group",mi_d)
                                line.sendText(msg.to,"🏂⛷️[จะออกไปแตะขอบฟ้า]")
                                line.createGroup("RED SAMURI Group",mi_d)
                                line.sendText(msg.to,"🏂⛷️[จะออกไปแตะขอบฟ้า]")
@@ -2894,7 +2912,7 @@ def lineBot(op):
                         if hr == day[i]: hasil = hari[i]
                     for k in range(0, len(bulan)):
                         if bln == str(k): bln = bulan[k-1]
-                    readTime = "🌴ปฏิทินโดย SAMURAI SELFBOT🌴" + "\n" + hasil + "\nที่ " + timeNow.strftime('%d') + " - " + bln + " - " + timeNow.strftime('%Y') + "\nเวลา : [ " + timeNow.strftime('%H:%M:%S') + " ]" + "\n\nBY: ™❍✯͜͡RED™SAMURI✯͜͡❂➣ "
+                    readTime = "🌴ปฏิทินโดย SAMURAI SELFBOT🌴" + "\n\n" + hasil + "\nที่ " + timeNow.strftime('%d') + " - " + bln + " - " + timeNow.strftime('%Y') + "\nเวลา : [ " + timeNow.strftime('%H:%M:%S') + " ]" + "\n\nBY: ™❍✯͜͡RED™SAMURI✯͜͡❂➣ "
                     line.sendMessage(msg.to, readTime)
 
                 elif "screenshotwebsite " in msg.text.lower():
