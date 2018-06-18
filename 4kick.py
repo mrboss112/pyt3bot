@@ -68,6 +68,7 @@ settingsOpen = codecs.open("temp.json","r","utf-8")
 read = json.load(readOpen)
 settings = json.load(settingsOpen)
 Rfu = [line,ki,kk,kc,ke]
+Exc = [line,ki,kk,kc,ke]
 lineMID = line.getProfile().mid
 kiMID = ki.getProfile().mid
 kkMID = kk.getProfile().mid
@@ -116,7 +117,7 @@ settings = {
     "clock": False,
     "cName":"",
     "cNames":"",
-    "changeGroupPicture":False,
+    "changeGroupPicture": [],
     "changePictureProfile":False,
     "welcome":"🙏สวีสดีครับคนมาใหม่🙏",
     "kick":"😱อุ๊ต๊ะ😱",
@@ -131,13 +132,45 @@ settings = {
     "pro_name": {},
     "message1":"รับแก้ไฟล์+เพิ่มไฟล์+แก้ภาษา\n💝ราคาดูที่หน้างาน💝\n👉มีบริการให้เช่าบอทSAMURAI\nราคา300บาทต่อเดือน💖\n#เพิ่มคิกเกอร์ตัวละ100👌\n🎀สนใจรีบทัก..บอทpython3ฟังชั่นล้นหลาม🎁กำลังรอให้คุณเป็นเจ้าของ\n(ผมจะอยู่ที่ห้องนี้แค่15นาทีนะจ๊ะ)\nselfbot by:\n╔══════════════┓\n╠™❍✯͜͡RED™SAMURAI✯͜͡❂➣ \n╚══════════════┛",
     "message":"บัญชีนี้ถูกป้องกันโดย Selfbot By ™❍✯͜͡RED™SAMURI✯͜͡❂➣ระบบได้ทำการบล็อคคุณอัตโนมัติเนื่องจากคุณยังไม่ได้ยืนยันตัวตนกับผู้สร้างบอท\nสามารถยืนตัวตนได้ง่ายโดยการพิม unblockกับ™❍✯͜͡RED™SAMURI✯͜͡❂➣ระบบจะทำการปลดบล็อคท่านโดยอัตโนมัต",
-    "comment":"""
-      🎋RED BOT LINE THAILAND🎋
-   🎏 ─┅═✥👊ᵀᴴᴬᴵᴸᴬᴺᴰ👊✥═┅─ 🎏
-🎎 💀[RED SAMURAI SELFBOT]💀 🎎
-
-📌รับแก้ไฟล📌เพิ่มคำสั่ง📌สอนทำเซล 📌แก้ภาษา
-🚩สนใจ ติดต่อ line id redsanuri7  📲 0946345913""",
+    "comment":"""🎋RED BOT LINE THAILAND🎋
+    ─┅═✥👊ᵀᴴᴬᴵᴸᴬᴺᴰ👊✥═┅─ 
+  💀[RED SAMURAI SELFBOT]💀 
+🎁🎁🎁🎁🎁🎁🎁🎁🎁🎁🎁
+🎀รับแก้ไฟล์+เพิ่มไฟล์+แก้ภาษา
+💝ราคาดูที่หน้างาน
+📌มีบริการให้เช่าเซลบอท SAMURAI 
+📌ร่างครึ่งคนครึ่งบอท
+📌ราคาว่ากันตามคุณภาพนะครับ
+📌ราคา300บาทต่อเดือน (ถูกมาก..)
+📌เพิ่มคิกเกอร์ตัวละ100👌
+👉บินได้ครับ
+👉รันได้ครับ
+👉ป้องกันกลุ่มเจอบินได้
+👉แอบดูคนอ่านได้
+👉แทคได้
+👉รันแชทได้
+👉ลบแชทได้
+👉กันรัน/ลบรันได้
+👉ตั้งปฏิเสธกลุ่มเชิญตามจำนวนสมาชิกได้
+👉เล่นเซลในแชทสตได้
+👉ตั้งข้อความคนเข้าคนออกได้
+👉ตั้งข้อความคนลบสมาชิกได้
+👉ตั้งข้อความคนแอดได้
+👉สมารถเรียกดูการตั้งค่าข้อความได้ทั้งหมด
+🍷มีความสามารถอีกเยอะดูเอาระกัน🍷
+🎀สนใจรีบทัก🎀
+🎉บอทpython3ฟังชั่นล้นหลาม คุณภาพแน่นปึ๊ก
+🎁กำลังรอให้คุณเป็นเจ้าของ....
+🎋(สนใจรีบโทร📲0946345913📞)
+📌หรือจิ้มที่นี่👇👇👇👇👇
+https://line.me/ti/p/samuri5
+https://line.me/ti/p/redsamuri7
+คุณจะได้เป็นเจ้าของ เซลบอทคุณภาพดีก่อนใครๆ
+(ทักก่อนจิ้ม...ไม่งั้นโดนออโต้บล็อคนะจ๊ะ)
+selfbot by:
+╔══════════════┓
+╠™❍✯͜͡RED™SAMURAI✯͜͡❂➣ 
+╚══════════════┛""",
     "userAgent": [
         "Mozilla/5.0 (X11; U; Linux i586; de; rv:5.0) Gecko/20100101 Firefox/5.0",
         "Mozilla/5.0 (X11; U; Linux amd64; rv:5.0) Gecko/20100101 Firefox/5.0 (Debian)",
@@ -228,7 +261,7 @@ backup.pictureStatus = contact.pictureStatus
 
 mulai = time.time() 
 dangerMessage = ["cleanse","group cleansed.","mulai",".winebot",".kickall","mayhem","kick on","Kick","!kickall","nuke","บิน","Kick","กระเด็น","หวด","เซลกากจัง","เตะ",".","ปลิว"]
-fukgerMessage = ["ควย","หี","แตด","เย็ดแม่","เย็ดเข้","ค.วย","สัส","เหี้ย","ไอ้เหี้ย","พ่อมึงตาย","ไอ้เลว","ระยำ","ชาติหมา","หน้าหี","เซลกาก","ไอ้เรส","ไอ้เหี้ยเรส","ไอ่เรส","พ่องตาย","ส้นตีน","แม่มึงอ่ะ","แม่มึงดิ","พ่อมึงดิ"]
+#fukgerMessage = ["ควย","หี","แตด","เย็ดแม่","เย็ดเข้","ค.วย","สัส","เหี้ย","ไอ้เหี้ย","พ่อมึงตาย","ไอ้เลว","ระยำ","ชาติหมา","หน้าหี","เซลกาก","ไอ้เรส","ไอ้เหี้ยเรส","ไอ่เรส","พ่องตาย","ส้นตีน","แม่มึงอ่ะ","แม่มึงดิ","พ่อมึงดิ"]
 
 myProfile["displayName"] = lineProfile.displayName
 myProfile["statusMessage"] = lineProfile.statusMessage
@@ -273,22 +306,6 @@ def logError(text):
     with open("errorLog.txt","a") as error:
         error.write("\n[%s] %s" % (str(time), text))
 
-def sendMention(to, mid, firstmessage, lastmessage):
-    try:
-        arrData = ""
-        text = "%s " %(str(firstmessage))
-        arr = []
-        mention = "@x "
-        slen = str(len(text))
-        elen = str(len(text) + len(mention) - 1)
-        arrData = {'S':slen, 'E':elen, 'M':mid}
-        arr.append(arrData)
-        text += mention + str(lastmessage)
-        line.sendMessage(to, text, {'MENTION': str('{"MENTIONEES":' + json.dumps(arr) + '}')}, 0)
-    except Exception as error:
-        logError(error)
-        line.sendMessage(to, "[ INFO ] Error :\n" + str(error))
-
 def sendMessage(to, text, contentMetadata={}, contentType=0):
     mes = Message()
     mes.to, mes.from_ = to, profile.mid
@@ -305,32 +322,6 @@ def sendMessageWithMention(to, lineMID):
         line.sendMessage(to, text_, contentMetadata={'MENTION':'{"MENTIONEES":['+aa+']}'}, contentType=0)
     except Exception as error:
         logError(error)
-
-def mentionMembers(to, mid):
-    try:
-        arrData = ""
-        textx = "╔══[Mention {} User]\n╠ ".format(str(len(mid)))
-        arr = []
-        no = 1
-        for i in mid:
-            mention = "@x\n"
-            slen = str(len(textx))
-            elen = str(len(textx) + len(mention) - 1)
-            arrData = {'S':slen, 'E':elen, 'M':i}
-            arr.append(arrData)
-            textx += mention
-            if no < len(mid):
-                no += 1
-                textx += "╠ "
-            else:
-                try:
-                    textx += "╚══[ {} ]".format(str(line.getGroup(to).name))
-                except:
-                    pass
-        line.sendMessage(to, textx, {'MENTION': str('{"MENTIONEES":' + json.dumps(arr) + '}')}, 0)
-    except Exception as error:
-        logError(error)
-        line.sendMessage(to, "[ INFO ] Error :\n" + str(error))
 
 def myhelp():
     myHelp = """╔══════════════┓
@@ -383,7 +374,7 @@ def listgrup():
              คำสั่งในกลุ่ม
  ────┅═ই۝ई═┅────
 ╔══════════════┓
-╠❂➣ แอด เชิญแอด
+╠❂➣ แอด
 ╠❂➣ ชื่อกลุ่ม
 ╠❂➣ ไอดีกลุ่ม
 ╠❂➣ เปิดลิ้ง
@@ -403,6 +394,7 @@ def listgrup():
 ╠❂➣ เลิกจับ
 ╠❂➣ จับใหม่
 ╠❂➣ อ่าน
+╠❂➣ .เปลี่ยนรูปกลุ่ม
 ╠❂➣ เปิดแสกน/ปิดแสกน
 ╠❂➣ เปิดรับแขก/ปิดรับแขก
 ╠❂➣ เปิดส่งแขก/ปิดส่งแขก
@@ -478,6 +470,8 @@ def helpset():
 ╠❂➣ สอย @
 ╠❂➣ ลาก่อย @
 ╠❂➣ ปลิว @
+╠❂➣ ดับไฟ
+╠❂➣ แปลงโฉม
 ╠❂➣ เพื่อน
 ╠❂➣ ไอดีเพื่อน
 ╠❂➣ Gcancel:(จำนวนสมาชิก)
@@ -506,7 +500,8 @@ def helpsetting():
 ╠❂➣ เปิดแทค/ปิดแทค
 ╠❂➣ เปิดแทค2/ปิดแทค2
 ╠❂➣ เปิดแทคเจ็บ/ปิดแทคเจ็บ
-╠❂➣ เปิดติ๊ก/ปิดติ๊ก
+╠❂➣ เปิดคท/ปิดคท
+╠❂➣ เปิดเช็คโพส/ปิดเช็คโพส
 ╠❂➣ เปิดแสกน/ปิดแสกน
 ╠❂➣ เปิดรับแขก/ปิดรับแขก
 ╠❂➣ เปิดส่งแขก/ปิดส่งแขก
@@ -816,6 +811,10 @@ def lineBot(op):
                         else: ret_ += "\n╠ ออกแชทรวม ✘ "
                         if settings["autoRead"] == True: ret_ += "\n╠ อ่านออโต้ ✔"
                         else: ret_ += "\n╠ อ่านออโต้   ✘ "				
+                        if settings["checkContact"] == True: ret_ += "\n╠ อ่านคท ✔"
+                        else: ret_ += "\n╠ อ่านคท        ✘ "
+                        if settings["checkPost"] == True: ret_ += "\n╠ เช็คโพส ✔"
+                        else: ret_ += "\n╠ เช็คโพส        ✘ "
                         if settings["checkSticker"] == True: ret_ += "\n╠ Sticker ✔"
                         else: ret_ += "\n╠ Sticker        ✘ "
                         if settings["detectMention"] == True: ret_ += "\n╠ ตอบกลับคนแทค ✔"
@@ -890,7 +889,19 @@ def lineBot(op):
                     line.sendMessage(to, "Check sticker enabled.")
                 elif text.lower() == '.ปิดติ๊ก':
                     settings["checkSticker"] = False
-                    line.sendMessage(to, "Check sticker disabled.")                
+                    line.sendMessage(to, "Check sticker disabled.")			
+                elif text.lower() == '.เปิดมุด':
+                    settings["autoJoinTicket"] = True
+                    line.sendMessage(to, "Autojoin byTicket  enabled.")
+                elif text.lower() == '.ปิดมุด':
+                    settings["autoJoinTicket"] = False
+                    line.sendMessage(to, "Autojoin byTicket  disabled.")
+                elif text.lower() == '.เปิดเผือก':
+                    settings["unsendMessage"] = True
+                    line.sendMessage(to, "unsendMessage  enabled.")
+                elif text.lower() == '.ปิดเผือก':
+                    settings["unsendMessage"] = False
+                    line.sendMessage(to, "unsendMessage disabled.")
 #==============================================================================#
                 elif text.lower() == '.โย่ว':
                     sendMessageWithMention(to, lineMID)
@@ -1054,30 +1065,43 @@ def lineBot(op):
                             for ls in lists:
                                 path = line.getProfileCoverURL(ls)
                                 line.sendImageWithURL(msg.to, str(path))
-                elif msg.text.lower().startswith(".ก๊อป "):
-                    if 'MENTION' in list(msg.contentMetadata.keys())!= None:
-                        names = re.findall(r'@(\w+)', text)
-                        mention = ast.literal_eval(msg.contentMetadata['MENTION'])
-                        mentionees = mention['MENTIONEES']
-                        for mention in mentionees:
-                            contact = mention["M"]
-                            break
+                elif ".ก๊อป " in msg.text:
+                  if msg._from in admin:
+                    targets = []
+                    key = eval(msg.contentMetadata["MENTION"])
+                    key["MENTIONEES"][0]["M"]
+                    for x in key["MENTIONEES"]:
+                            targets.append(x["M"])
+                    for target in targets:
                         try:
-                            line.cloneContactProfile(contact)
-                            line.sendMessage(msg.to, "😊จัดไป😊")
-                        except:
-                            line.sendMessage(msg.to, "😊บ่ได้😊")
-                            
-                elif text.lower() == '.คืนร่าง':
+                            contact = line.getContact(target)
+                            X = contact.displayName
+                            profile = line.getProfile()
+                            profile.displayName = X
+                            line.updateProfile(profile)
+                            line.sendMessage(msg.to, "Success...")
+                        #---------------------------------------
+                            Y = contact.statusMessage
+                            lol = line.getProfile()
+                            lol.statusMessage = Y
+                            line.updateProfile(lol)
+                        #---------------------------------------
+                            P = contact.pictureStatus
+                            hun = line.getProfile()
+                            hun.pictureStatus = P
+                            line.updateProfile(hun)
+                        except Exception as e:
+                            line.sendMessage(msg.to, "Failed!")
+                            print (e)
+
+                elif msg.text in ["คืนร่าง"]:
                     try:
-                        lineProfile.displayName = str(myProfile["displayName"])
-                        lineProfile.statusMessage = str(myProfile["statusMessage"])
-                        lineProfile.pictureStatus = str(myProfile["pictureStatus"])
-                        line.updateProfileAttribute(8, lineProfile.pictureStatus)
-                        line.updateProfile(lineProfile)
-                        line.sendMessage(msg.to, "Berhasil restore profile")
-                    except:
-                        line.sendMessage(msg.to, "Gagal restore profile")
+                        line.updateProfile.pictureStatus(backup.pictureStatus)
+                        line.updateProfile.statusMessage(backup.statusMessage)
+                        line.updateProfile.displayName(backup.displayName)
+                        line.sendMessage(msg.to, "กลับร่างเดิมแล้ว")
+                    except Exception as e:
+                        line.sendText(msg.to, str (e))
 						
 #==============================================================================#
                 elif msg.text.lower().startswith("mimicadd "):
@@ -1339,165 +1363,125 @@ def lineBot(op):
                                Mids = [target for contact in thisgroup[0].members]
                                mi_d = Mids[:33]
                                line.createGroup("RED SAMURI Group",mi_d)
-                               line.sendText(msg.to,"🏂⛷️[จะออกไปแตะขอบฟ้า]")
+			       line.sendText(msg.to,"🏂⛷️[จะออกไปแตะขอบฟ้า]")
+			       ki.createGroup("RED SAMURI Group",mi_d)
+                               ki.sendText(msg.to,"🏂⛷️[จะออกไปแตะขอบฟ้า]")
+                               ke.createGroup("RED SAMURI Group",mi_d)
+                               ke.sendText(msg.to,"🏂⛷️[จะออกไปแตะขอบฟ้า]")
+			       kk.createGroup("RED SAMURI Group",mi_d)
+                               kk.sendText(msg.to,"🏂⛷️[จะออกไปแตะขอบฟ้า]")
+                               kcc.createGroup("RED SAMURI Group",mi_d)
+                               kc.sendText(msg.to,"🏂⛷️[จะออกไปแตะขอบฟ้า]")
                                line.createGroup("RED SAMURI Group",mi_d)
-                               line.sendText(msg.to,"🏂⛷️[จะออกไปแตะขอบฟ้า]")
+			       line.sendText(msg.to,"🏂⛷️[จะออกไปแตะขอบฟ้า]")
+			       ki.createGroup("RED SAMURI Group",mi_d)
+                               ki.sendText(msg.to,"🏂⛷️[จะออกไปแตะขอบฟ้า]")
+                               ke.createGroup("RED SAMURI Group",mi_d)
+                               ke.sendText(msg.to,"🏂⛷️[จะออกไปแตะขอบฟ้า]")
+			       kk.createGroup("RED SAMURI Group",mi_d)
+                               kk.sendText(msg.to,"🏂⛷️[จะออกไปแตะขอบฟ้า]")
+                               kcc.createGroup("RED SAMURI Group",mi_d)
+                               kc.sendText(msg.to,"🏂⛷️[จะออกไปแตะขอบฟ้า]")
                                line.createGroup("RED SAMURI Group",mi_d)
-                               line.sendText(msg.to,"🏂⛷️[จะออกไปแตะขอบฟ้า]")
+			       line.sendText(msg.to,"🏂⛷️[จะออกไปแตะขอบฟ้า]")
+			       ki.createGroup("RED SAMURI Group",mi_d)
+                               ki.sendText(msg.to,"🏂⛷️[จะออกไปแตะขอบฟ้า]")
+                               ke.createGroup("RED SAMURI Group",mi_d)
+                               ke.sendText(msg.to,"🏂⛷️[จะออกไปแตะขอบฟ้า]")
+			       kk.createGroup("RED SAMURI Group",mi_d)
+                               kk.sendText(msg.to,"🏂⛷️[จะออกไปแตะขอบฟ้า]")
+                               kcc.createGroup("RED SAMURI Group",mi_d)
+                               kc.sendText(msg.to,"🏂⛷️[จะออกไปแตะขอบฟ้า]")
+			       line.createGroup("RED SAMURI Group",mi_d)
+			       line.sendText(msg.to,"🏂⛷️[จะออกไปแตะขอบฟ้า]")
+			       ki.createGroup("RED SAMURI Group",mi_d)
+                               ki.sendText(msg.to,"🏂⛷️[จะออกไปแตะขอบฟ้า]")
+                               ke.createGroup("RED SAMURI Group",mi_d)
+                               ke.sendText(msg.to,"🏂⛷️[จะออกไปแตะขอบฟ้า]")
+			       kk.createGroup("RED SAMURI Group",mi_d)
+                               kk.sendText(msg.to,"🏂⛷️[จะออกไปแตะขอบฟ้า]")
+                               kcc.createGroup("RED SAMURI Group",mi_d)
+                               kc.sendText(msg.to,"🏂⛷️[จะออกไปแตะขอบฟ้า]")
+			       line.createGroup("RED SAMURI Group",mi_d)
+			       line.sendText(msg.to,"🏂⛷️[จะออกไปแตะขอบฟ้า]")
+			       ki.createGroup("RED SAMURI Group",mi_d)
+                               ki.sendText(msg.to,"🏂⛷️[จะออกไปแตะขอบฟ้า]")
+                               ke.createGroup("RED SAMURI Group",mi_d)
+                               ke.sendText(msg.to,"🏂⛷️[จะออกไปแตะขอบฟ้า]")
+			       kk.createGroup("RED SAMURI Group",mi_d)
+                               kk.sendText(msg.to,"🏂⛷️[จะออกไปแตะขอบฟ้า]")
+                               kcc.createGroup("RED SAMURI Group",mi_d)
+                               kc.sendText(msg.to,"🏂⛷️[จะออกไปแตะขอบฟ้า]")
                                line.createGroup("RED SAMURI Group",mi_d)
-                               line.sendText(msg.to,"🏂⛷️[จะออกไปแตะขอบฟ้า]")
+			       line.sendText(msg.to,"🏂⛷️[จะออกไปแตะขอบฟ้า]")
+			       ki.createGroup("RED SAMURI Group",mi_d)
+                               ki.sendText(msg.to,"🏂⛷️[จะออกไปแตะขอบฟ้า]")
+                               ke.createGroup("RED SAMURI Group",mi_d)
+                               ke.sendText(msg.to,"🏂⛷️[จะออกไปแตะขอบฟ้า]")
+			       kk.createGroup("RED SAMURI Group",mi_d)
+                               kk.sendText(msg.to,"🏂⛷️[จะออกไปแตะขอบฟ้า]")
+                               kcc.createGroup("RED SAMURI Group",mi_d)
+                               kc.sendText(msg.to,"🏂⛷️[จะออกไปแตะขอบฟ้า]")
                                line.createGroup("RED SAMURI Group",mi_d)
-                               line.sendText(msg.to,"🏂⛷️[จะออกไปแตะขอบฟ้า]")
+			       line.sendText(msg.to,"🏂⛷️[จะออกไปแตะขอบฟ้า]")
+			       ki.createGroup("RED SAMURI Group",mi_d)
+                               ki.sendText(msg.to,"🏂⛷️[จะออกไปแตะขอบฟ้า]")
+                               ke.createGroup("RED SAMURI Group",mi_d)
+                               ke.sendText(msg.to,"🏂⛷️[จะออกไปแตะขอบฟ้า]")
+			       kk.createGroup("RED SAMURI Group",mi_d)
+                               kk.sendText(msg.to,"🏂⛷️[จะออกไปแตะขอบฟ้า]")
+                               kcc.createGroup("RED SAMURI Group",mi_d)
+                               kc.sendText(msg.to,"🏂⛷️[จะออกไปแตะขอบฟ้า]")
+			       line.createGroup("RED SAMURI Group",mi_d)
+			       line.sendText(msg.to,"🏂⛷️[จะออกไปแตะขอบฟ้า]")
+			       ki.createGroup("RED SAMURI Group",mi_d)
+                               ki.sendText(msg.to,"🏂⛷️[จะออกไปแตะขอบฟ้า]")
+                               ke.createGroup("RED SAMURI Group",mi_d)
+                               ke.sendText(msg.to,"🏂⛷️[จะออกไปแตะขอบฟ้า]")
+			       kk.createGroup("RED SAMURI Group",mi_d)
+                               kk.sendText(msg.to,"🏂⛷️[จะออกไปแตะขอบฟ้า]")
+                               kcc.createGroup("RED SAMURI Group",mi_d)
+                               kc.sendText(msg.to,"🏂⛷️[จะออกไปแตะขอบฟ้า]")
+			       line.createGroup("RED SAMURI Group",mi_d)
+			       line.sendText(msg.to,"🏂⛷️[จะออกไปแตะขอบฟ้า]")
+			       ki.createGroup("RED SAMURI Group",mi_d)
+                               ki.sendText(msg.to,"🏂⛷️[จะออกไปแตะขอบฟ้า]")
+                               ke.createGroup("RED SAMURI Group",mi_d)
+                               ke.sendText(msg.to,"🏂⛷️[จะออกไปแตะขอบฟ้า]")
+			       kk.createGroup("RED SAMURI Group",mi_d)
+                               kk.sendText(msg.to,"🏂⛷️[จะออกไปแตะขอบฟ้า]")
+                               kcc.createGroup("RED SAMURI Group",mi_d)
+                               kc.sendText(msg.to,"🏂⛷️[จะออกไปแตะขอบฟ้า]")
                                line.createGroup("RED SAMURI Group",mi_d)
-                               line.sendText(msg.to,"🏂⛷️[จะออกไปแตะขอบฟ้า]")
+			       line.sendText(msg.to,"🏂⛷️[จะออกไปแตะขอบฟ้า]")
+			       ki.createGroup("RED SAMURI Group",mi_d)
+                               ki.sendText(msg.to,"🏂⛷️[จะออกไปแตะขอบฟ้า]")
+                               ke.createGroup("RED SAMURI Group",mi_d)
+                               ke.sendText(msg.to,"🏂⛷️[จะออกไปแตะขอบฟ้า]")
+			       kk.createGroup("RED SAMURI Group",mi_d)
+                               kk.sendText(msg.to,"🏂⛷️[จะออกไปแตะขอบฟ้า]")
+                               kcc.createGroup("RED SAMURI Group",mi_d)
+                               kc.sendText(msg.to,"🏂⛷️[จะออกไปแตะขอบฟ้า]")
                                line.createGroup("RED SAMURI Group",mi_d)
-                               line.sendText(msg.to,"🏂⛷️[จะออกไปแตะขอบฟ้า]")
-                               line.createGroup("RED SAMURI Group",mi_d)
-                               line.sendText(msg.to,"🏂⛷️[จะออกไปแตะขอบฟ้า]")
-                               line.createGroup("RED SAMURI Group",mi_d)
-                               line.sendText(msg.to,"🏂⛷️[จะออกไปแตะขอบฟ้า]")
-                               line.createGroup("RED SAMURI Group",mi_d)
-                               line.sendText(msg.to,"🏂⛷️[จะออกไปแตะขอบฟ้า]")
-                               line.createGroup("RED SAMURAI Group",mi_d)
-                               line.sendText(msg.to,"🏂⛷️[จะออกไปแตะขอบฟ้า]")
-                               line.createGroup("RED SAMURAI Group",mi_d)
-                               line.sendText(msg.to,"🏂⛷️[จะออกไปแตะขอบฟ้า]")
-                               line.createGroup("RED SAMURAI Group",mi_d)
-                               line.sendText(msg.to,"🏂⛷️[จะออกไปแตะขอบฟ้า]")
-                               line.createGroup("RED SAMURAI Group",mi_d)
-                               line.sendText(msg.to,"🏂⛷️[จะออกไปแตะขอบฟ้า]")
-                               line.createGroup("RED SAMURAI Group",mi_d)
-                               line.sendText(msg.to,"🏂⛷️[จะออกไปแตะขอบฟ้า]")
-                               line.createGroup("RED SAMURAI Group",mi_d)
-                               line.sendText(msg.to,"🏂⛷️[จะออกไปแตะขอบฟ้า]")
-                               line.createGroup("RED SAMURAI Group",mi_d)
-                               line.sendText(msg.to,"🏂⛷️[จะออกไปแตะขอบฟ้า]")
-                               line.createGroup("RED SAMURAI Group",mi_d)
-                               line.sendText(msg.to,"🏂⛷️[จะออกไปแตะขอบฟ้า]")
-                               line.createGroup("RED SAMURAI Group",mi_d)
-                               line.sendText(msg.to,"🏂⛷️[จะออกไปแตะขอบฟ้า]")
-                               line.createGroup("RED SAMURAI Group",mi_d)
-                               line.sendText(msg.to,"🏂⛷️[จะออกไปแตะขอบฟ้า]")
-                               line.createGroup("RED SAMURI Group",mi_d)
-                               line.sendText(msg.to,"🏂⛷️[จะออกไปแตะขอบฟ้า]")
-                               line.createGroup("RED SAMURI Group",mi_d)
-                               line.sendText(msg.to,"🏂⛷️[จะออกไปแตะขอบฟ้า]")
-                               line.createGroup("RED SAMURI Group",mi_d)
-                               line.sendText(msg.to,"🏂⛷️[จะออกไปแตะขอบฟ้า]")
-                               line.createGroup("RED SAMURI Group",mi_d)
-                               line.sendText(msg.to,"🏂⛷️[จะออกไปแตะขอบฟ้า]")
-                               line.createGroup("RED SAMURI Group",mi_d)
-                               line.sendText(msg.to,"🏂⛷️[จะออกไปแตะขอบฟ้า]")
-                               line.createGroup("RED SAMURI Group",mi_d)
-                               line.sendText(msg.to,"🏂⛷️[จะออกไปแตะขอบฟ้า]")
-                               line.createGroup("RED SAMURI Group",mi_d)
-                               line.sendText(msg.to,"🏂⛷️[จะออกไปแตะขอบฟ้า]")
-                               line.createGroup("RED SAMURI Group",mi_d)
-                               line.sendText(msg.to,"🏂⛷️[จะออกไปแตะขอบฟ้า]")
-                               line.createGroup("RED SAMURI Group",mi_d)
-                               line.sendText(msg.to,"🏂⛷️[จะออกไปแตะขอบฟ้า]")
-                               line.createGroup("RED SAMURI Group",mi_d)
-                               line.sendText(msg.to,"🏂⛷️[จะออกไปแตะขอบฟ้า]")
-                               line.createGroup("RED SAMURAI Group",mi_d)
-                               line.sendText(msg.to,"🏂⛷️[จะออกไปแตะขอบฟ้า]")
-                               line.createGroup("RED SAMURAI Group",mi_d)
-                               line.sendText(msg.to,"🏂⛷️[จะออกไปแตะขอบฟ้า]")
-                               line.createGroup("RED SAMURAI Group",mi_d)
-                               line.sendText(msg.to,"🏂⛷️[จะออกไปแตะขอบฟ้า]")
-                               line.createGroup("RED SAMURAI Group",mi_d)
-                               line.sendText(msg.to,"🏂⛷️[จะออกไปแตะขอบฟ้า]")
-                               line.createGroup("RED SAMURAI Group",mi_d)
-                               line.sendText(msg.to,"🏂⛷️[จะออกไปแตะขอบฟ้า]")
-                               line.createGroup("RED SAMURAI Group",mi_d)
-                               line.sendText(msg.to,"🏂⛷️[จะออกไปแตะขอบฟ้า]")
-                               line.createGroup("RED SAMURAI Group",mi_d)
-                               line.sendText(msg.to,"🏂⛷️[จะออกไปแตะขอบฟ้า]")
-                               line.createGroup("RED SAMURAI Group",mi_d)
-                               line.sendText(msg.to,"🏂⛷️[จะออกไปแตะขอบฟ้า]")
-                               line.createGroup("RED SAMURAI Group",mi_d)
-                               line.sendText(msg.to,"🏂⛷️[จะออกไปแตะขอบฟ้า]")
-                               line.createGroup("RED SAMURAI Group",mi_d)
-                               line.sendText(msg.to,"🏂⛷️[จะออกไปแตะขอบฟ้า]")
-                               line.createGroup("RED SAMURI Group",mi_d)
-                               line.sendText(msg.to,"🏂⛷️[จะออกไปแตะขอบฟ้า]")
-                               line.createGroup("RED SAMURI Group",mi_d)
-                               line.sendText(msg.to,"🏂⛷️[จะออกไปแตะขอบฟ้า]")
-                               line.createGroup("RED SAMURI Group",mi_d)
-                               line.sendText(msg.to,"🏂⛷️[จะออกไปแตะขอบฟ้า]")
-                               line.createGroup("RED SAMURI Group",mi_d)
-                               line.sendText(msg.to,"🏂⛷️[จะออกไปแตะขอบฟ้า]")
-                               line.createGroup("RED SAMURI Group",mi_d)
-                               line.sendText(msg.to,"🏂⛷️[จะออกไปแตะขอบฟ้า]")
-                               line.createGroup("RED SAMURI Group",mi_d)
-                               line.sendText(msg.to,"🏂⛷️[จะออกไปแตะขอบฟ้า]")
-                               line.createGroup("RED SAMURI Group",mi_d)
-                               line.sendText(msg.to,"🏂⛷️[จะออกไปแตะขอบฟ้า]")
-                               line.createGroup("RED SAMURI Group",mi_d)
-                               line.sendText(msg.to,"🏂⛷️[จะออกไปแตะขอบฟ้า]")
-                               line.createGroup("RED SAMURI Group",mi_d)
-                               line.sendText(msg.to,"🏂⛷️[จะออกไปแตะขอบฟ้า]")
-                               line.createGroup("RED SAMURI Group",mi_d)
-                               line.sendText(msg.to,"🏂⛷️[จะออกไปแตะขอบฟ้า]")
-                               line.createGroup("RED SAMURAI Group",mi_d)
-                               line.sendText(msg.to,"🏂⛷️[จะออกไปแตะขอบฟ้า]")
-                               line.createGroup("RED SAMURAI Group",mi_d)
-                               line.sendText(msg.to,"🏂⛷️[จะออกไปแตะขอบฟ้า]")
-                               line.createGroup("RED SAMURAI Group",mi_d)
-                               line.sendText(msg.to,"🏂⛷️[จะออกไปแตะขอบฟ้า]")
-                               line.createGroup("RED SAMURAI Group",mi_d)
-                               line.sendText(msg.to,"🏂⛷️[จะออกไปแตะขอบฟ้า]")
-                               line.createGroup("RED SAMURAI Group",mi_d)
-                               line.sendText(msg.to,"🏂⛷️[จะออกไปแตะขอบฟ้า]")
-                               line.createGroup("RED SAMURAI Group",mi_d)
-                               line.sendText(msg.to,"🏂⛷️[จะออกไปแตะขอบฟ้า]")
-                               line.createGroup("RED SAMURAI Group",mi_d)
-                               line.sendText(msg.to,"🏂⛷️[จะออกไปแตะขอบฟ้า]")
-                               line.createGroup("RED SAMURAI Group",mi_d)
-                               line.sendText(msg.to,"🏂⛷️[จะออกไปแตะขอบฟ้า]")
-                               line.createGroup("RED SAMURAI Group",mi_d)
-                               line.sendText(msg.to,"🏂⛷️[จะออกไปแตะขอบฟ้า]")
-                               line.createGroup("RED SAMURAI Group",mi_d)
-                               line.sendText(msg.to,"🏂⛷️[จะออกไปแตะขอบฟ้า]")
-                               line.createGroup("RED SAMURI Group",mi_d)
-                               line.sendText(msg.to,"🏂⛷️[จะออกไปแตะขอบฟ้า]")
-                               line.createGroup("RED SAMURI Group",mi_d)
-                               line.sendText(msg.to,"🏂⛷️[จะออกไปแตะขอบฟ้า]")
-                               line.createGroup("RED SAMURI Group",mi_d)
-                               line.sendText(msg.to,"🏂⛷️[จะออกไปแตะขอบฟ้า]")
-                               line.createGroup("RED SAMURI Group",mi_d)
-                               line.sendText(msg.to,"🏂⛷️[จะออกไปแตะขอบฟ้า]")
-                               line.createGroup("RED SAMURI Group",mi_d)
-                               line.sendText(msg.to,"🏂⛷️[จะออกไปแตะขอบฟ้า]")
-                               line.createGroup("RED SAMURI Group",mi_d)
-                               line.sendText(msg.to,"🏂⛷️[จะออกไปแตะขอบฟ้า]")
-                               line.createGroup("RED SAMURI Group",mi_d)
-                               line.sendText(msg.to,"🏂⛷️[จะออกไปแตะขอบฟ้า]")
-                               line.createGroup("RED SAMURI Group",mi_d)
-                               line.sendText(msg.to,"🏂⛷️[จะออกไปแตะขอบฟ้า]")
-                               line.createGroup("RED SAMURI Group",mi_d)
-                               line.sendText(msg.to,"🏂⛷️[จะออกไปแตะขอบฟ้า]")
-                               line.createGroup("RED SAMURI Group",mi_d)
-                               line.sendText(msg.to,"🏂⛷️[จะออกไปแตะขอบฟ้า]")
-                               line.createGroup("RED SAMURAI Group",mi_d)
-                               line.sendText(msg.to,"🏂⛷️[จะออกไปแตะขอบฟ้า]")
-                               line.createGroup("RED SAMURAI Group",mi_d)
-                               line.sendText(msg.to,"🏂⛷️[จะออกไปแตะขอบฟ้า]")
-                               line.createGroup("RED SAMURAI Group",mi_d)
-                               line.sendText(msg.to,"🏂⛷️[จะออกไปแตะขอบฟ้า]")
-                               line.createGroup("RED SAMURAI Group",mi_d)
-                               line.sendText(msg.to,"🏂⛷️[จะออกไปแตะขอบฟ้า]")
-                               line.createGroup("RED SAMURAI Group",mi_d)
-                               line.sendText(msg.to,"🏂⛷️[จะออกไปแตะขอบฟ้า]")
-                               line.createGroup("RED SAMURAI Group",mi_d)
-                               line.sendText(msg.to,"🏂⛷️[จะออกไปแตะขอบฟ้า]")
-                               line.createGroup("RED SAMURAI Group",mi_d)
-                               line.sendText(msg.to,"🏂⛷️[จะออกไปแตะขอบฟ้า]")
-                               line.createGroup("RED SAMURAI Group",mi_d)
-                               line.sendText(msg.to,"🏂⛷️[จะออกไปแตะขอบฟ้า]")
-                               line.createGroup("RED SAMURAI Group",mi_d)
-                               line.sendText(msg.to,"🏂⛷️[จะออกไปแตะขอบฟ้า]")
-                               line.createGroup("RED SAMURAI Group",mi_d)
-                               line.sendText(msg.to,"🏂⛷️[จะออกไปแตะขอบฟ้า]")
+			       line.sendText(msg.to,"🏂⛷️[จะออกไปแตะขอบฟ้า]")
+			       ki.createGroup("RED SAMURI Group",mi_d)
+                               ki.sendText(msg.to,"🏂⛷️[จะออกไปแตะขอบฟ้า]")
+                               ke.createGroup("RED SAMURI Group",mi_d)
+                               ke.sendText(msg.to,"🏂⛷️[จะออกไปแตะขอบฟ้า]")
+			       kk.createGroup("RED SAMURI Group",mi_d)
+                               kk.sendText(msg.to,"🏂⛷️[จะออกไปแตะขอบฟ้า]")
+                               kcc.createGroup("RED SAMURI Group",mi_d)
+                               kc.sendText(msg.to,"🏂⛷️[จะออกไปแตะขอบฟ้า]")
+			       line.createGroup("RED SAMURI Group",mi_d)
+			       line.sendText(msg.to,"🏂⛷️[จะออกไปแตะขอบฟ้า]")
+			       ki.createGroup("RED SAMURI Group",mi_d)
+                               ki.sendText(msg.to,"🏂⛷️[จะออกไปแตะขอบฟ้า]")
+                               ke.createGroup("RED SAMURI Group",mi_d)
+                               ke.sendText(msg.to,"🏂⛷️[จะออกไปแตะขอบฟ้า]")
+			       kk.createGroup("RED SAMURI Group",mi_d)
+                               kk.sendText(msg.to,"🏂⛷️[จะออกไปแตะขอบฟ้า]")
+                               kcc.createGroup("RED SAMURI Group",mi_d)
+                               kc.sendText(msg.to,"🏂⛷️[จะออกไปแตะขอบฟ้า]")
                                line.sendText(msg.to,"เรียบร้อย")
                             except:
                                 pass
@@ -3080,7 +3064,7 @@ def lineBot(op):
                         if hr == day[i]: hasil = hari[i]
                     for k in range(0, len(bulan)):
                         if bln == str(k): bln = bulan[k-1]
-                    readTime = "🌴ปฏิทินโดย SAMURAI SELFBOT🌴" + "\n" + hasil + "\nที่ " + timeNow.strftime('%d') + " - " + bln + " - " + timeNow.strftime('%Y') + "\nเวลา : [ " + timeNow.strftime('%H:%M:%S') + " ]" + "\n\nBY: ™❍✯͜͡RED™SAMURI✯͜͡❂➣ "
+                    readTime = "🌴ปฏิทินโดย SAMURAI SELFBOT🌴" + "\n\n" + hasil + "\nที่ " + timeNow.strftime('%d') + " - " + bln + " - " + timeNow.strftime('%Y') + "\nเวลา : [ " + timeNow.strftime('%H:%M:%S') + " ]" + "\n\nBY: ™❍✯͜͡RED™SAMURI✯͜͡❂➣ "
                     line.sendMessage(msg.to, readTime)
 
                 elif "screenshotwebsite " in msg.text.lower():
@@ -4121,6 +4105,40 @@ def lineBot(op):
                             settings["Lv"] = False
                             if settings["lang"] == "JP":
                                 line.sendMessage(to,"ปิดข้อความอำลาเมื่อมีสมาชิกออกกลุ่ม   ")
+                elif msg.text.lower() == '.ปิดคท':
+                        if settings["checkContact"] == False:
+                            if settings["lang"] == "JP":
+                                line.sendMessage(to,"ปิดระบบอ่านข้อมูลด้วยคอนแทค ")
+                        else:
+                            settings["checkContact"] = False
+                            if settings["lang"] == "JP":
+                                line.sendMessage(to,"ปิดระบบอ่านข้อมูลด้วยคอนแทคไว้อยู่แล้ว ")
+                elif msg.text.lower() == '.เปิดเช็คโพส':
+                        if settings["checkPost"] == True:
+                            if settings["lang"] == "JP":
+                                line.sendMessage(to,"เปิดระบบเช็คโพสบนทามไลน์" )
+                        else:
+                            settings["checkPost"] = True
+                            if settings["lang"] == "JP":
+                                line.sendMessage(to,"เปิดระบบเช็คโพสบนทามไลน์อยู่แล้ว ")
+                elif msg.text.lower() == '.ปิดเช็คโพส':
+                        if settings["checkPost"] == False:
+                            if settings["lang"] == "JP":
+                                line.sendMessage(to,"ปิดระบบเช็คโพสบนทามไลน์ ")
+                        else:
+                            settings["checkPost"] = False
+                            if settings["lang"] == "JP":
+                                line.sendMessage(to,"ปิดระบบเช็คโพสบนทามไลน์ไว้อยู่แล้ว ")
+                elif text.lower() == ".แปลงโฉม":
+                    settings["changePictureProfile"] = True
+                    line.sendMessage(to, "ส่งรูปภาพลงมาได้เลยครับผม")
+                elif text.lower() == ".เปลี่ยนรูปกลุ่ม":
+                    if msg.toType == 2:
+                        if to not in settings["changeGroupPicture"]:
+                            settings["changeGroupPicture"].append(to)
+                        line.sendMessage(to, "ส่งรูปภาพลงมาไดเเลยครับผม")
+                elif text.lower() == ".ดับไฟ":
+                    line.sendContact(to, "u1f41296217e740650e0448b96851a3e2',")
 
                 elif text.lower() == '.ลบรัน':
                     gid = line.getGroupIdsInvited()
@@ -4244,13 +4262,13 @@ def lineBot(op):
                     path = line.downloadObjectMsg(msg_id)
                     settings["changePictureProfile"] = False
                     line.updateProfilePicture(path)
-                    line.sendMessage(to, "Berhasil mengubah foto profile")
+                    line.sendMessage(to, "ทำการแปลงโฉมเสร็จเรียบร้อย")
                 if msg.toType == 2:
                     if to in settings["changeGroupPicture"]:
                         path = line.downloadObjectMsg(msg_id)
                         settings["changeGroupPicture"].remove(to)
                         line.updateGroupPicture(to, path)
-                        line.sendMessage(to, "Berhasil mengubah foto group")
+                        line.sendMessage(to, "เปลี่ยนรูปภาพกลุ่มเรียบร้อยแล้ว"))
             elif msg.contentType == 7:
                 if settings["checkSticker"] == True:
                     stk_id = msg.contentMetadata['STKID']
@@ -4263,7 +4281,69 @@ def lineBot(op):
                     ret_ += "\n╠ STICKER URL : line://shop/detail/{}".format(pkg_id)
                     ret_ += "\n╚══[ Finish ]"
                     line.sendMessage(to, str(ret_))
-              
+            elif msg.contentType == 13:
+                if settings["checkContact"] == True:
+                    try:
+                        contact = line.getContact(msg.contentMetadata["mid"])
+                        if line != None:
+                            cover = line.getProfileCoverURL(msg.contentMetadata["mid"])
+                        else:
+                            cover = "Tidak dapat masuk di line channel"
+                        path = "http://dl.profile.line-cdn.net/{}".format(str(contact.pictureStatus))
+                        try:
+                            line.sendImageWithURL(to, str(path))
+                        except:
+                            pass
+                        ret_ = "[ รายการทั้งหมดจากการสำรวจด้วย คท ]"
+                        ret_ += "\n ชื่อ : {}".format(str(contact.displayName))
+                        ret_ += "\n ไอดี : {}".format(str(msg.contentMetadata["mid"]))
+                        ret_ += "\n ตัส : {}".format(str(contact.statusMessage))
+                        ret_ += "\n รูปโปรไฟล : http://dl.profile.line-cdn.net/{}".format(str(contact.pictureStatus))
+                        ret_ += "\n  รูปปก : {}".format(str(cover))
+                        ret_ += "\n[ สิ้นสุดการสำรวจ ]"
+                        line.sendMessage(to, str(ret_))
+                    except:
+                        line.sendMessage(to, "เกิดข้อผิดพลาดในการสำรวจ")
+            elif msg.contentType == 16:
+                if settings["checkPost"] == True:
+                    try:
+                        ret_ = "[ ข้อมูลของโพสนี้ ]"
+                        if msg.contentMetadata["serviceType"] == "GB":
+                            contact = line.getContact(sender)
+                            auth = "\n  ผู้เขียนโพส : {}".format(str(contact.displayName))
+                        else:
+                            auth = "\n  ผู้เขียนโพส : {}".format(str(msg.contentMetadata["serviceName"]))
+                        purl = "\n  ลิ้งโพส : {}".format(str(msg.contentMetadata["postEndUrl"]).replace("line://","https://line.me/R/"))
+                        ret_ += auth
+                        ret_ += purl
+                        if "mediaOid" in msg.contentMetadata:
+                            object_ = msg.contentMetadata["mediaOid"].replace("svc=myhome|sid=h|","")
+                            if msg.contentMetadata["mediaType"] == "V":
+                                if msg.contentMetadata["serviceType"] == "GB":
+                                    ourl = "\n  Objek URL : https://obs-us.line-apps.com/myhome/h/download.nhn?tid=612w&{}".format(str(msg.contentMetadata["mediaOid"]))
+                                    murl = "\n  Media URL : https://obs-us.line-apps.com/myhome/h/download.nhn?{}".format(str(msg.contentMetadata["mediaOid"]))
+                                else:
+                                    ourl = "\n  Objek URL : https://obs-us.line-apps.com/myhome/h/download.nhn?tid=612w&{}".format(str(object_))
+                                    murl = "\n  Media URL : https://obs-us.line-apps.com/myhome/h/download.nhn?{}".format(str(object_))
+                                    ret_ += murl
+                            else:
+                                if msg.contentMetadata["serviceType"] == "GB":
+                                    ourl = "\n Objek URL : https://obs-us.line-apps.com/myhome/h/download.nhn?tid=612w&{}".format(str(msg.contentMetadata["mediaOid"]))
+                                else:
+                                    ourl = "\n Objek URL : https://obs-us.line-apps.com/myhome/h/download.nhn?tid=612w&{}".format(str(object_))
+                            ret_ += ourl
+                        if "stickerId" in msg.contentMetadata:
+                            stck = "\n  Stiker : https://line.me/R/shop/detail/{}".format(str(msg.contentMetadata["packageId"]))
+                            ret_ += stck
+                        if "text" in msg.contentMetadata:
+                            text = "\n ข้อความโดยย่อ : {}".format(str(msg.contentMetadata["text"]))
+                            ret_ += text
+                        ret_ += "\n[ สิ้นสุดการเช็คโพส ]"
+                        line.sendMessage(to, str(ret_))
+                    except:
+                        line.sendMessage(to, "เกิดข้อผิดะลาดในการเช็คโพสนี้")
+    except Exception as error:
+        logError(error)  
 #==============================================================================#
         if op.type == 19:
           if op.param2 in Family:
@@ -4892,6 +4972,7 @@ def lineBot(op):
              dan = line.getContact(op.param2)
              tgb = line.getGroup(op.param1)
              line.sendMessage(op.param1, str(settings["welcome"]) +"\nสวัสดี {}, Welcome to Group {}\nเข้ามาแล้วทำตัวดีๆละ\nอ่ย่าไปเป็นบ้าลบเพื่อนๆออกกลุ่มนะ (｀・ω・´)".format(str(dan.displayName),str(tgb.name)))
+	     line.sendMessage(op.param1,"{}".format(str(dan.statusMessage)))
              line.sendContact(op.param1, op.param2)
              line.sendImageWithURL(op.param1, "http://dl.profile.line-cdn.net{}".format(dan.picturePath))
              line.sendMessage(op.param1, str(settings["comment"]))
@@ -4903,6 +4984,7 @@ def lineBot(op):
              dan = line.getContact(op.param2)
              tgb = line.getGroup(op.param1)
              line.sendMessage(op.param1,str(settings["kick"]) + "\nเฮ้ย {}, คือหยังมันโหดแท้วะΣ(っﾟДﾟ；)っ ".format(str(dan.displayName)))
+	     line.sendMessage(op.param1,"{}".format(str(dan.statusMessage)))
              line.sendContact(op.param1, op.param2)
              line.sendImageWithURL(op.param1, "http://dl.profile.line-cdn.net{}".format(dan.picturePath))
         if op.type == 15:
